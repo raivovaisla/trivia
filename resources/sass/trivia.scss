@@ -1,0 +1,52 @@
+$color-border: #ccc;
+$color-error: #ff0000;
+$color-success: #008000;
+$color-page-wrapper: #fff;
+
+body {
+  margin: 0;
+  background: #3b3232;
+}
+
+.page-wrapper {
+  max-width: 600px;
+  margin: 80px auto 0;
+  padding: 20px;
+  background: $color-page-wrapper;
+  border-radius: 4px;
+}
+
+.alert-success {
+  color: $color-success;
+}
+
+.alert-error {
+  color: $color-error;
+}
+
+input {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid $color-border;
+  outline: none;
+}
+
+button {
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+.row {
+  margin: 10px 0;
+}
+
+h3 {
+   margin: 0;
+}
+
+.questionText {
+  margin: 5px 0 15px;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}

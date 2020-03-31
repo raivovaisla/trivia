@@ -11,6 +11,15 @@
 |
 */
 
+$trivia = 'TriviaController';
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::name('trivia.')->prefix('/trivia')->group(function () use ($trivia) {
+    Route::get('', "$trivia@getTrivia")->name('get');
+    Route::post('/start', "$trivia@startTrivia")->name('start');
+    Route::post('/answer/{questionId}', "$trivia@answerTrivia")->name('answer');
+    Route::post('/reset', "$trivia@resetTrivia")->name('reset');
 });
